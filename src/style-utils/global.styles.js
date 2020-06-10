@@ -23,6 +23,7 @@ body{
     font-family: 'Inter', sans-serif;
     background: ${({ theme: { colors } }) => colors.background};
     min-height: 100vh;
+    transition: background 1s;
 }
 
 #root {

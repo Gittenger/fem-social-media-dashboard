@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../providers/theme.provider";
 
 import { SwitchContainer, SwitchButton } from "./switch.styles.jsx";
 
 const Switch = () => {
-  const [switchOn, setSwitchOn] = useState(false);
+  const { light, toggleTheme } = useContext(ThemeContext);
 
   return (
     <SwitchContainer
-      className={switchOn ? "active" : ""}
-      onClick={() => setSwitchOn(!switchOn)}
+      className={light ? "" : "active"}
+      onClick={() => toggleTheme()}
     >
       <SwitchButton />
     </SwitchContainer>

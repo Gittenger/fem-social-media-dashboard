@@ -29,7 +29,6 @@ export const ToggleBox = styled.div`
   ${FlexCenter}
   text-transform: capitalize;
   width: 15rem;
-  border: solid 1px black;
 
   & > *:first-child {
     margin-right: 2rem;

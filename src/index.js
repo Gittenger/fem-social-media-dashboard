@@ -3,17 +3,16 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 
-import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./style-utils/theme.js";
+import ThemeContextProvider from "./providers/theme.provider";
 import "./index.css";
 
 // import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={lightTheme}>
+    <ThemeContextProvider>
       <App />
-    </ThemeProvider>
+    </ThemeContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
