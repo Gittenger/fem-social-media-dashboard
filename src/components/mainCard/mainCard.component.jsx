@@ -1,40 +1,31 @@
 import React from "react";
 
-import Facebook from "../../assets/icon-facebook.svg";
-import Twitter from "../../assets/icon-twitter.svg";
-import Instagram from "../../assets/icon-instagram.svg";
-import Youtube from "../../assets/icon-youtube.svg";
+import { getPlatform } from "../../assets/imgUtils";
 
-import {} from "./mainCard.styles.jsx";
+import {
+  CardContainer,
+  CardHeading,
+  CardNumber,
+  CardDelta,
+} from "./mainCard.styles.jsx";
 
 const MainCard = ({ platform, handle, numFollowers, followersYesterday }) => {
-  const getPlatform = (platform) =>
-    platform === "facebook"
-      ? Facebook
-      : platform === "twitter"
-      ? Twitter
-      : platform === "instagram"
-      ? Instagram
-      : platform === "youtube"
-      ? Youtube
-      : Facebook;
-
   const deltaFollowers = (numFollowers, followersYesterday) =>
     numFollowers - followersYesterday;
 
   return (
-    <div>
-      <div>
+    <CardContainer>
+      <CardHeading>
         <img src={getPlatform(platform)} alt="" /> {handle}
-      </div>
-      <div>
-        {numFollowers}
-        <p>Followers</p>
-      </div>
-      <div>
+      </CardHeading>
+      <CardNumber>
+        <p className="card-number">{numFollowers}</p>
+        <p className="followers">Followers</p>
+      </CardNumber>
+      <CardDelta>
         {deltaFollowers(numFollowers, followersYesterday)} since yesterday
-      </div>
-    </div>
+      </CardDelta>
+    </CardContainer>
   );
 };
 

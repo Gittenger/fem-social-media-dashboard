@@ -30,6 +30,11 @@ body{
     padding-top: 7rem;
     ${FlexCenter}
     flex-direction: column;
+
+    .overview-header {
+        margin-top: 2rem;
+        color: ${({ theme: { colors } }) => colors.textSub};
+    }
 }
 
 a{

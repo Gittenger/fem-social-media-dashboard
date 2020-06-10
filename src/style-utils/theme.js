@@ -4,8 +4,7 @@ const commonColors = {
   facebookBlue: "#198ff5",
   twitterBlue: "#1ca0f2",
   youtubeRed: "#c4032a",
-  instagramGradient1: "#fdc468",
-  instagramGradient2: "#df4996",
+  instagramGradient: "linear-gradient(to right, #fdc468,  #df4996)",
 };
 
 const layouts = {
@@ -17,7 +16,7 @@ const layouts = {
 export const darkTheme = {
   colors: {
     ...commonColors,
-    toggle: "linear-gradient(to right, #378fe6, #3eda82 )",
+    toggle: "linear-gradient(to right, #378fe6, #3eda82)",
     background:
       "linear-gradient(to bottom, #1f212e, #1f212e 25rem, #1e202a 1%, #1e202a)",
     cardBg: "#252a41",
