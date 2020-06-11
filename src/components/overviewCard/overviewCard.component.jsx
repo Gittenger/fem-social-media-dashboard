@@ -13,7 +13,8 @@ import {
 } from "./overviewCard.styles.jsx";
 
 const OverviewCard = ({ platform, title, number, numberYesterday }) => {
-  const getDelta = (number, numberYesterday) => number - numberYesterday;
+  const getDelta = (number, numberYesterday) =>
+    Math.floor((number / numberYesterday) * 100 - 100);
 
   const delta = getDelta(number, numberYesterday);
   const deltaRender = (delta) =>
@@ -29,7 +30,7 @@ const OverviewCard = ({ platform, title, number, numberYesterday }) => {
       <CardDelta positive={delta >= 0 ? true : false}>
         <div>
           <img src={delta >= 0 ? IconUp : IconDown} alt="" />
-          {deltaRender(delta)}
+          {deltaRender(delta) + "%"}
         </div>
       </CardDelta>
     </CardContainer>
