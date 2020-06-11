@@ -6,6 +6,7 @@ import IconDown from "../../assets/icon-down.svg";
 import IconUp from "../../assets/icon-up.svg";
 import {
   CardContainer,
+  ColorBar,
   CardHeading,
   CardNumber,
   CardDelta,
@@ -25,6 +26,7 @@ const MainCard = ({ platform, handle, numFollowers, followersYesterday }) => {
 
   return (
     <CardContainer>
+      <ColorBar platform={platform} />
       <CardHeading>
         <img src={getPlatform(platform)} alt="" /> {handle}
       </CardHeading>
