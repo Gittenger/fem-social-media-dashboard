@@ -22,6 +22,7 @@ export const SwitchContainer = styled.div`
   display: flex;
   align-items: center;
   transform: scale(1);
+  cursor: pointer;
 
   ${normalStyles}
 

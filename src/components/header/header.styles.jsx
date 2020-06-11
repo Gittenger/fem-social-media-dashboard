@@ -7,6 +7,7 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   color: ${({ theme: { colors } }) => colors.textSub};
+  transition: color 0.4s;
 `;
 
 export const HeaderText = styled.div`
@@ -19,6 +20,7 @@ export const HeaderText = styled.div`
 export const Title = styled.h1`
   text-transform: capitalize;
   color: ${({ theme: { colors } }) => colors.textMain};
+  transition: color 0.2s;
 `;
 
 export const Subtitle = styled.p`

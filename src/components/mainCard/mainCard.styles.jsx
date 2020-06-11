@@ -7,9 +7,14 @@ export const CardContainer = styled.div`
   flex-direction: column;
   background: ${({ theme: { colors } }) => colors.cardBg};
   padding: 3rem 0;
+  transition: background 0.1s;
 
   & > *:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+
+  & > * {
+    transition: color 0.4s;
   }
 `;
 

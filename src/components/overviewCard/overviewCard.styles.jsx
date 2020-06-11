@@ -9,6 +9,11 @@ export const CardContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 1rem;
+  transition: background 0.1s;
+
+  & > * {
+    transition: color 0.4s;
+  }
 `;
 
 export const CardTitle = styled.h3`
