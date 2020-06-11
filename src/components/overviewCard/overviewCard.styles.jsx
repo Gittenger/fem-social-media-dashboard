@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FlexCenter } from "../../style-utils/utils.styles";
+import { FlexCenter, getDeltaStyle } from "../../style-utils/utils.styles";
 
 export const CardContainer = styled.div`
   background: ${({ theme: { colors } }) => colors.cardBg};
@@ -38,5 +38,12 @@ export const CardDelta = styled.p`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  color: ${({ theme: { colors } }) => colors.primaryGreen};
+  ${getDeltaStyle}
+  div {
+    ${FlexCenter}
+
+    img {
+      margin-right: 0.5rem;
+    }
+  }
 `;

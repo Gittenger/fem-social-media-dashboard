@@ -34,7 +34,8 @@ body{
 
     .overview-header {
         margin-top: 2rem;
-        color: ${({ theme: { colors } }) => colors.textSub};
+        color: ${({ theme: { colors } }) => colors.textMain};
+        transition: color 0.2s;
     }
 }
 

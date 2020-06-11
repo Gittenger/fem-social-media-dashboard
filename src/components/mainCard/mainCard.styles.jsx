@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FlexCenter } from "../../style-utils/utils.styles";
+import { FlexCenter, getDeltaStyle } from "../../style-utils/utils.styles";
 
 export const CardContainer = styled.div`
   ${FlexCenter}
@@ -41,6 +41,11 @@ export const CardNumber = styled.div`
 `;
 
 export const CardDelta = styled.div`
-  color: ${({ theme: { colors } }) => colors.primaryGreen};
+  ${FlexCenter}
   padding-top: 0.5rem;
+  ${getDeltaStyle}
+
+  img {
+    margin-right: 0.5rem;
+  }
 `;
