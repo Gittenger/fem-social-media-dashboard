@@ -14,6 +14,11 @@ export const CardContainer = styled.div`
   & > * {
     transition: color 0.4s;
   }
+
+  &:hover {
+    cursor: pointer;
+    background: ${({ theme: { colors } }) => colors.cardBgActive};
+  }
 `;
 
 export const CardTitle = styled.h3`
@@ -34,7 +39,7 @@ export const CardNumber = styled.p`
   color: ${({ theme: { colors } }) => colors.textMain};
 `;
 
-export const CardDelta = styled.p`
+export const CardDelta = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;

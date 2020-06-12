@@ -17,6 +17,11 @@ export const CardContainer = styled.div`
   & > * {
     transition: color 0.4s;
   }
+
+  &:hover {
+    cursor: pointer;
+    background: ${({ theme: { colors } }) => colors.cardBgActive};
+  }
 `;
 
 export const ColorBar = styled.div`

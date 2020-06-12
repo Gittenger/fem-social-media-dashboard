@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
 
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body{
@@ -19,6 +20,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     font-size: 1.4rem;
+    padding-bottom: 4rem;
     width: 100vw;
     font-family: 'Inter', sans-serif;
     background: ${({ theme: { colors } }) => colors.background};
@@ -33,7 +35,7 @@ body{
     flex-direction: column;
 
     .overview-header {
-        margin-top: 2rem;
+        margin: 4.5rem 0 2.5rem;
         color: ${({ theme: { colors } }) => colors.textMain};
         transition: color 0.2s;
     }

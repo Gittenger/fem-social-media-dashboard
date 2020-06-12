@@ -28,6 +28,7 @@ const Header = () => {
           <span>{numFollowers.toLocaleString()}</span>
         </Subtitle>
       </HeaderText>
+      <hr />
       <ToggleBox>
         <p>dark mode</p>
         <Switch />

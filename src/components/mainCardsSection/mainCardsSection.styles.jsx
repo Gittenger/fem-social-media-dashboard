@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { FlexCenter } from "../../style-utils/utils.styles";
+import { device } from "../../style-utils/utils.styles";
+
+const { mobileS } = device;
 
 export const SectionContainer = styled.div`
   display: grid;
@@ -8,4 +10,8 @@ export const SectionContainer = styled.div`
   grid-template-rows: 1fr;
   grid-gap: 2rem;
   width: 100%;
+
+  @media ${mobileS} {
+    grid-template-columns: 1fr;
+  }
 `;

@@ -11,6 +11,9 @@ const layouts = {
   desktop: {
     contentWidth: "1200px",
   },
+  mobileS: {
+    contentWidth: "340px",
+  },
 };
 
 export const darkTheme = {
@@ -22,6 +25,7 @@ export const darkTheme = {
     backgroundGrad1: "#1f212e",
     backgroundGrad2: "#1e202a",
     cardBg: "#252a41",
+    cardBgActive: "#333a56",
     textSub: "#8b97c6",
     textMain: "#ffffff",
   },
@@ -39,6 +43,7 @@ export const lightTheme = {
     backgroundGrad1: "#f5f7ff",
     backgroundGrad2: "#ffffff",
     cardBg: "#f0f2fa",
+    cardBgActive: "#e1e3f0",
     textSub: "#63687e",
     textMain: "#1e202a",
   },
