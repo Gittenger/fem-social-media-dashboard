@@ -1,17 +1,24 @@
 import styled from "styled-components";
 
-import { device } from "../../style-utils/utils.styles";
+import { device, deviceMin } from "../../style-utils/utils.styles";
 
-const { mobileS } = device;
+const { mobileM, laptopM } = device;
+const { minLaptopM } = deviceMin;
 
 export const ContainerDiv = styled.div`
-  width: ${({
-    theme: {
-      layout: { desktop },
-    },
-  }) => desktop.contentWidth};
-
-  @media ${mobileS} {
+  @media ${laptopM} {
     width: 90%;
+  }
+
+  @media ${mobileM} {
+    width: 90%;
+  }
+
+  @media ${minLaptopM} {
+    width: ${({
+      theme: {
+        layout: { desktop },
+      },
+    }) => desktop.contentWidth};
   }
 `;

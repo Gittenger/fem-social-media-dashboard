@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { FlexCenter, device } from "../../style-utils/utils.styles";
 
-const { mobileS } = device;
+const { mobileM } = device;
 
 export const HeaderContainer = styled.div`
   ${FlexCenter}
@@ -16,7 +16,7 @@ export const HeaderContainer = styled.div`
     display: none;
   }
 
-  @media ${mobileS} {
+  @media ${mobileM} {
     flex-direction: column;
     align-items: flex-start;
 
@@ -34,7 +34,7 @@ export const HeaderText = styled.div`
   justify-content: space-evenly;
   align-items: flex-start;
 
-  @media ${mobileS} {
+  @media ${mobileM} {
     margin-bottom: 2rem;
   }
 `;
@@ -44,7 +44,7 @@ export const Title = styled.h1`
   color: ${({ theme: { colors } }) => colors.textMain};
   transition: color 0.2s;
 
-  @media ${mobileS} {
+  @media ${mobileM} {
     font-size: 1.6em;
   }
 `;
@@ -62,7 +62,7 @@ export const ToggleBox = styled.div`
     margin-right: 2rem;
   }
 
-  @media ${mobileS} {
+  @media ${mobileM} {
     width: 100%;
     justify-content: space-between;
   }

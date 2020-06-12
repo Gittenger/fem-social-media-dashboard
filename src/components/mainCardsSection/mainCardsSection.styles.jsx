@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { device } from "../../style-utils/utils.styles";
 
-const { mobileS } = device;
+const { mobileM, tabletLand } = device;
 
 export const SectionContainer = styled.div`
   display: grid;
@@ -11,7 +11,11 @@ export const SectionContainer = styled.div`
   grid-gap: 2rem;
   width: 100%;
 
-  @media ${mobileS} {
+  @media ${tabletLand} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media ${mobileM} {
     grid-template-columns: 1fr;
   }
 `;
